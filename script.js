@@ -26,7 +26,7 @@ var interval;
 
 var settings = {
     duration: '1000',
-    random: false
+    random: true
 };
 
 init(settings);
@@ -47,9 +47,6 @@ document.querySelectorAll('.arrow').forEach(function (item) {
     item.addEventListener('mouseenter', function () {
         clearInterval(interval);
     });
-});
-
-document.querySelectorAll('.arrow').forEach(function (item) {
     item.addEventListener('mouseleave', function () {
         init(settings);
     });
@@ -68,10 +65,6 @@ function init(settings) {
             prev = index;
         } else {
             //artan index
-            if (slaytCount == index + 1) {
-                index = -1;
-            }
-            showSlide(index);
             console.log(index);
             index++;
         }
